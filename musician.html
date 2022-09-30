@@ -26,15 +26,15 @@ function checkGuess(){
     name = document.getElementById("form1_name").value
     guess = document.getElementById("form1_guess").value
        
-    out = document.getElementById("result")
+    result = document.getElementById("result")
     if(name==guess){
         alert("You got it right")
         correct=correct+1
-        out.innerHTML = "correct: " + correct + " " + "wrong: " + wrong
+        result.innerHTML = "correct: " + correct + " " + "wrong: " + wrong
     } else {
         alert("Wrong Musician")
         wrong=wrong+1
-        out.innerHTML = "correct: " + correct + " " + "wrong: " + wrong
+        result.innerHTML = "correct: " + correct + " " + "wrong: " + wrong
     }
 }
 </script>
