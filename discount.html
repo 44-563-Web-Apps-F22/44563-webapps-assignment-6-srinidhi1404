@@ -18,6 +18,24 @@
 
 <p id="result">This text will be replaced </p>
 
+<form>
+    <input type="radio" id="rg1_times" name="radioButton" value="times"   
+      checked >
+    <label for="rg1_times”">*</label></br>
+  
+    <input type="radio" id="rg1_divide" name="radioButton" 
+       value="divide">
+    <label for="rg1_divide">/</label></br>
+  
+    <input type="radio" id="rg1_exponent" name="radioButton"   
+       value="exponent">
+    <label for="rg1_exponent">**</label></br>
+
+    <input type="button" onclick="chooseOp()" value="Get values from radio group">
+  </form>
+
+  <p id="radioResult">This text will be replaced </p>
+
 
 
 <script> 
@@ -34,10 +52,28 @@ function discount(){
         
     }
 
-    document.getElementById("result").innerHTML = "Discounted amounts for base "+amount+" are: "+result
-        
+    document.getElementById("result").innerHTML = "Discounted amounts for base "+amount+" are: "+result     
+}
+
+function chooseOp() {
+    console.log("Getting input")
+    amount = document.getElementById("form1_amount").value
+    disc = document.getElementById("form1_discount").value
+    timesOpt = document.getElementById("rg1_times").checked
+    divideOpt = document.getElementById("rg1_divide").checked
+    exponentOpt = document.getElementById("rg1_exponent").checked
     
     
+    out = document.getElementById("radioResult")
+    if(timesOpt)
+    {
+        out.innerHTML = amount*disc
+    } else if(divideOpt){
+        out.innerHTML = amount/disc
+    }else if(exponentOpt){
+        out.innerHTML = amount**disc
+    }
+
 }
 
 
