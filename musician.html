@@ -40,6 +40,13 @@ function checkGuess(){
         wrong=wrong+1
         result.innerHTML = "correct: " + correct + " " + "wrong: " + wrong
     }
+    if(wrong>3){
+        incorrectGuess()
+    }
+}
+
+function incorrectGuess(){
+    alert("Sorry, game over")
 }
 
 let usingImage = 1;
