@@ -15,38 +15,49 @@
 
 <h2>Srinidhi Balmuri computes discounts</h2>
 
+<div class="container">
 <form>
+    <div class="form-group">
     <label for="form1_amount">Enter base amount</label>
-    <input type ="number" id="form1_amount" name="form1_amount" min=10 max=50 step=2 value="20"> <br>
-
+    <input type ="number" id="form1_amount"  class="form-control" name="form1_amount" min=10 max=50 step=2 value="20"> <br>
+    </div>
+    <div class="form-group">
     <label for="form1_discount">Enter the discount percentage</label>
-    <input type ="number" id="form1_discount" name="form1_discount" value="10"> <br>
-
-    <input type="button" onclick="discount()" value="Apply discount">
+    <input type ="number" id="form1_discount"  class="form-control" name="form1_discount" value="10"> <br>
+    </div>
+    <input type="button" onclick="discount()" class="btn btn-info" value="Apply discount">
 </form>
-
-
+<br>
 <p id="result">This text will be replaced </p>
 
+<hr>
+
+
 <form>
-    <input type="radio" id="rg1_times" name="radioButton" value="times"   
+    <div class="form-check">
+    <input type="radio" class="form-check-input" id="rg1_times" name="radioButton" value="times"   
       checked >
     <label for="rg1_times”">*</label></br>
-  
-    <input type="radio" id="rg1_divide" name="radioButton" 
+    </div>
+
+    <div class="form-check">
+    <input type="radio" class="form-check-input" id="rg1_divide" name="radioButton" 
        value="divide">
     <label for="rg1_divide">/</label></br>
-  
-    <input type="radio" id="rg1_exponent" name="radioButton"   
+    </div>
+
+    <div class="form-check">
+    <input type="radio" class="form-check-input" id="rg1_exponent" name="radioButton"   
        value="exponent">
     <label for="rg1_exponent">**</label></br>
-
-    <input type="button" onclick="chooseOp()" value="Get values from radio group">
+    </div>
+    
+    <input type="button" onclick="chooseOp()"  class="btn btn-outline-primary" value="Get values from radio group">
   </form>
 
-  <p id="radioResult">This text will be replaced </p>
+  <p id="radioResult" style="margin-top:0.2cm ;">This text will be replaced </p>
 
-
+</div>
 
 <script> 
     

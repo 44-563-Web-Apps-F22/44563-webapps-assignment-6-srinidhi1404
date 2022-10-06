@@ -14,37 +14,43 @@
 
 <body>
 
-<h2>Srinidhi Balmuri selects a vacation</h2>
+<h2 style="margin-left:1cm ;">Srinidhi Balmuri selects a vacation</h2>
 
+<div class="container">
 <form>
-    <input type="checkbox" id="cb1_air" name="travel1"   
+    <div class="form-check">
+    <input type="checkbox" id="cb1_air" name="travel1"   class="form-check-input"
       value="True" checked>
-    <label for="cb1_air">Travel by Air</label></br>
-  
-    <input type="checkbox" id="cb1_domestic" name="travel2" 
+    <label for="cb1_air"  class="form-check-label">Travel by Air</label></br>
+</div>
+<div class="form-check">
+    <input type="checkbox" id="cb1_domestic" name="travel2" class="form-check-input"
        value="True">
-    <label for="cb1_domestic">Domestic</label></br>
-  
-    <input type="checkbox" id="cb1_resort" name="travel3"   
+    <label for="cb1_domestic"  class="form-check-label">Domestic</label></br>
+  </div>
+  <div class="form-check">
+    <input type="checkbox" id="cb1_resort" name="travel3"   class="form-check-input"
        value="False" checked>
-    <label for="cb1_resort">Resort</label></br>
-
-    <input type="button" onclick="selectVacation()" value="Select a vacation">
+    <label for="cb1_resort"  class="form-check-label">Resort</label></br>
+</div>
+    <input type="button" class="btn btn-outline-secondary" onclick="selectVacation()" value="Select a vacation">
   </form>
 
   <p id="checkResult">This text will be replaced </p>
 
 <form>
+    <div class="form-group">
     <label for="form1_city">Enter a city</label>
-    <input type ="text" id="form1_city" name="form1_city" min=10 max=50 step=2 value=city> <br>
-
+    <input type ="text" id="form1_city" name="form1_city" class="form-control" min=10 max=50 step=2 value=city> <br>
+</div>
+<div class="form-group">
     <label for="form1_price">Enter price </label>
-    <input type ="text" id="form1_price" name="form1_price" autofocus> <br>
-
-    <input type="button" onclick="updateVacation()" value="Update the vacation">
+    <input type ="text" id="form1_price" name="form1_price" class="form-control" autofocus> <br>
+</div>
+    <input type="button" onclick="updateVacation()" class="btn btn-outline-info" value="Update the vacation">
 </form>
 
-
+</div>
 
 
 <script> 
